@@ -5,6 +5,7 @@ $(document).ready(function() {
     })
     .done(function(data) {
       console.log("success");
+      $('#list').empty()
       for (var i in data) {
         $('#list').append("<li>" + data[i].name + " - " + data[i].points + "</li>")
       }
