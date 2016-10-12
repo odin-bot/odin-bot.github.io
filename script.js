@@ -9,13 +9,8 @@ $(document).ready(function() {
       for (var i in data) {
         $('#list').append("<li>" + data[i].name + " - " + data[i].points + "</li>")
       }
-
     })
     .fail(function() {
-      console.log("error");
+      $('#list').empty().append("<h2>something seems to have gone wrong with the server.. sorry :(</h2>")
     })
-    .always(function() {
-      console.log("complete");
-    });
-
 });
